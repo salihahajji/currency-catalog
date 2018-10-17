@@ -1,0 +1,21 @@
+<div style="text-align:center">
+    <h1>
+      Available currencies
+    </h1>
+</div>
+<app-search (searchPage)="onSearch($event)"></app-search>
+<mat-grid-list #grid rowHeight="2:1">
+  <a *ngFor="let currency of currencies | slice:0:200" routerLink="#/currency/{{currency.id}}">
+    <mat-grid-tile>
+        Id : {{currency.id}}<br>
+        Type : {{currency.attributes.currency_type}} <br>
+        Symbol : {{currency.attributes.symbol}} <br>
+    </mat-grid-tile>
+  </a>
+</mat-grid-list>
+<br>
+<mat-paginator [length]="total"
+              [pageSize]="10"
+              [pageSizeOptions]="[10, 50, 100]"
+              (page)="onPaginateChange($event)">
+</mat-paginator>

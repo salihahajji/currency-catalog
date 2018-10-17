@@ -1,0 +1,42 @@
+<h2 *ngIf="currency">
+  Details of Currency with Id : {{currency.id}}<br>
+</h2>
+<table *ngIf="currency">
+    <tr>
+      <th>Code</th>
+      <td>{{currency.attributes.code}}</td>
+    </tr>
+    <tr>
+        <th>Name</th>
+        <td>{{currency.attributes.name}}</td>
+    </tr>
+    <tr>
+        <th>Currency Type</th>
+        <td>{{currency.attributes.currency_type}}</td>
+    </tr>
+    <tr>
+        <th>codeIsoNumeric3</th>
+        <td>{{currency.attributes.code_iso_numeric3}}</td>
+      </tr>
+      <tr>
+          <th>codeIsoAlpha3</th>
+          <td>{{currency.attributes.code_iso_alpha3}}</td>
+      </tr>
+      <tr>
+          <th>Symbol</th>
+          <td>{{currency.attributes.symbol}}</td>
+      </tr>
+      <tr>
+          <th>Native symbol</th>
+          <td>{{currency.attributes.native_symbol}}</td>
+      </tr>
+      <tr>
+          <th>Category</th>
+          <td>{{currency.attributes.category}}</td>
+      </tr>
+      <tr>
+          <th>decimalE</th>
+          <td>{{currency.attributes.decimal_e}}</td>
+      </tr>
+  </table>
+  <a routerLink="">Go Back</a>

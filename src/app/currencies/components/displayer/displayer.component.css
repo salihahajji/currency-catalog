@@ -1,0 +1,7 @@
+mat-grid-tile {
+  background: rgb(206, 247, 248);
+}
+
+a:hover mat-grid-tile {
+  background: rgb(98, 187, 247);
+}
